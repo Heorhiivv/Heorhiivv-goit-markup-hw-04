@@ -7,6 +7,7 @@
 }
 
 body {
+
     color: var(--primary-text-color);
     background-color: var(--white-text-color);
 
@@ -32,13 +33,22 @@ a {
      /* INDEX HTML STYLES */
 
 .container {
+    margin-left: auto;
+    margin-right: auto;
     width: 1170px;
     padding-left: 15px;
     padding-right: 15px;
 }
 
 /* Header */
-.page-header {}
+.main {
+    display: flex;
+    align-items: center;
+}
+.main-nav {
+    align-items: center;
+    display: flex;
+}
 
 /* logo */
 .logo {
@@ -56,7 +66,22 @@ a {
 }
 
 /* Site-nav */
+.site-nav {
+    display: flex;
+
+    margin-left: 85px;
+}
+.site-nav .item + .item {
+    margin-left: 50px;
+}
+/* .site-nav .item:not(:last-child) {
+    margin-right: 50px;
+} */
 .site-nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color: var(--title-text-color);
 
     font-weight: 500;
@@ -72,8 +97,22 @@ a {
     color: var(--accent-color);
 }
 
-/* Header contacts */
+/* Feedback */
+.feedback {
+    margin-left: auto;
+}
+
+.header-contacts {
+    display: flex;
+}
+.header-contacts .item + .item{
+    margin-left: 30px;
+}
 .header-contacts .link {
+    display: block;
+    /* padding-top: 32px;
+    padding-bottom: 32px; */
+
     color: var(--primary-text-color);
 }
 .header-contacts .link:hover,
@@ -100,6 +139,8 @@ a {
 
 /* Advantages section*/
 .advantages {
+    display: flex;
+
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -247,6 +288,7 @@ a {
 
 .button {
     display: inline-block;
+    border: 1px solid var(--accent-color);
     border-radius: 4px;
     padding: 10px 32px;
     min-width: 200px;
